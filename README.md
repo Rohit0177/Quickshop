@@ -32,6 +32,7 @@ Before making the repository public:
 
 - Review the SQL dump and remove or anonymize any real customer, administrator, or other sensitive data. It includes existing database records and should not be assumed safe to publish.
 - Do not publish production database credentials. Replace the local example settings in both config files with a secure configuration method before deploying.
+- The translation demo in `shopping/translate.php` reads `PERPLEXITY_API_KEY` from the PHP process environment. Configure it through your host's secret/environment-variable settings if you use that page; never put the key in PHP or browser code.
 - Keep backups of any existing database before importing the dump.
 
 ## Project layout
